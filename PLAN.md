@@ -56,6 +56,19 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 继续推进顶部构图校准：收紧桌面 hero 顶部留白（`.ref-home__hero`）、微调主 logo 与蓝色块比例，压低 1024/1280 的结构漂移。
+  - 细调 `<=640` hero 比例与 logo 宽度，恢复并提升 `430` 断点拟合度。
+  - 刷新固定审图集到 `Homepage/review-shots/latest/{430-top,1024-top,1280-top,1280-full}.png`。
+- Next:
+  - 继续修复 1280 顶图中主 logo 与蓝色块交叉点位置（当前仍偏右），并收敛导航与 intro 分割线厚度差。
+  - 进入 feature panel/floor spacing 的纵向节奏校准，避免 1280 full 提前露出黑色媒体面板。
+- Blocked:
+  - 无真实阻塞；目前仅是视觉未完全收敛。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 继续推进 Stage 2/3：针对 `430` 顶区重排移动端 hero/info 节奏，压缩首屏高度并校正导航信息层级。
   - 在 `max-width:640px` 下调整 `hero-stage` 比例、logo 与蓝色块尺寸及位置，减少与 `web-ref-430` 的构图偏差。
   - 移动端导航改为两行紧凑布局（隐藏左侧描述、保留 links + 版权行），并微调 intro 左栏宽度。
