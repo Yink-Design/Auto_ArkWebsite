@@ -19,6 +19,12 @@ This file governs agent work inside `Homepage`.
   - static composition follows Ark
   - motion must adapt to Ark, never the other way around
 
+## Branch Discipline
+- Final reviewable commits for homepage work must land on `Codex`.
+- `work` may be used only as a temporary execution branch, never as the final review branch.
+- If commits are created on `work`, sync/cherry-pick/merge the reviewable result to `Codex` before ending the task.
+- Keep the final fixed review-shot files committed on `Codex` as the source for web review.
+
 ## Preferred Edit Targets
 - First choice:
   - `src/components/home/ArkPrototypeHome.astro`

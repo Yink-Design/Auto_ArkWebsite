@@ -6,6 +6,11 @@
 - Keep the local VS Code workflow moving through a repeatable loop: inspect, implement, check, capture, compare, record, continue.
 
 ## Rules Of Progress
+- Final reviewable commits must be on branch `Codex`; `work` is temporary only.
+- If you produce commits on `work`, move/sync the reviewable result to `Codex` before ending the session.
+- Final review-shot outputs must be visible on `Codex`.
+- Short commands from web chat (`继续推进`/`继续`/`continue`) mean resume the highest-priority unfinished task by default.
+- All explanatory reports in this file must use Simplified Chinese.
 - Work in order. Do not skip ahead unless the current stage is blocked by a real dependency.
 - Solve one concrete visual or responsive issue per loop.
 - After each visible change, run `npm run check`, capture affected screenshots, then update this file.

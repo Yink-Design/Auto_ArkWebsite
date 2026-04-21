@@ -10,6 +10,14 @@ This file is for coding agents working in this repository. Treat it as executabl
   2. `FigmaRef` animation and auto-layout ideas
   3. Implementation convenience
 
+## Branch And Review Rules
+- All final reviewable deliverables must land on branch `Codex`.
+- Branch `work` is only a temporary execution branch and must not be used as the final review branch.
+- If new commits are created on `work`, before ending the session you must safely organize and move the reviewable result onto `Codex` without losing history.
+- The final visible review-shot set must also be committed on `Codex`.
+- If the user sends short continuation commands in web chat, such as `继续推进`, `继续`, or `continue`, continue from the highest-priority unfinished item by default.
+- All explanatory reporting must be written in Simplified Chinese.
+
 ## Default Working Pattern
 - Inspect existing code and references before editing.
 - Prefer modifying the existing Astro implementation instead of replacing the stack.
