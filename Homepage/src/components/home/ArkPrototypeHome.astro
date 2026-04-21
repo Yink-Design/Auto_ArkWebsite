@@ -185,6 +185,8 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
     width: 63%;
     height: 100%;
     color: var(--ink);
+    transform: scale(1.12);
+    transform-origin: left top;
   }
 
   .ref-home__band,
@@ -481,6 +483,14 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
       padding-top: 4px;
     }
 
+    .ref-home__mini-lockup {
+      display: flex;
+      top: 2px;
+      transform: scale(0.62);
+      transform-origin: left top;
+    }
+
+
     .ref-home__hero-stage {
       aspect-ratio: 1 / 0.42;
     }
@@ -491,6 +501,7 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
       top: -2px;
       left: -2px;
       bottom: auto;
+      transform: none;
     }
 
     .ref-home__hero-media {

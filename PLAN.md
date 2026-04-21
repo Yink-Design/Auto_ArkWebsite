@@ -56,6 +56,19 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 在 `<=640` 断点恢复并缩放 mini-lockup（左上角小标识），使 430 顶区层级更贴近参考图。
+  - 保留桌面 hero 的缩放试探并验证，确认本轮主要收益集中在移动端（430 指标继续下降）。
+  - 覆盖固定审图集：`review-shots/latest/430-top.png`、`1024-top.png`、`1280-top.png`、`1280-full.png`。
+- Next:
+  - 聚焦 1024/1280：修正主 logo 与蓝色块交叉点水平位置，减少 desktop 顶区错位。
+  - 继续校准 nav 与 intro 的纵向节奏，避免 1280 full 提前进入黑色媒体面板。
+- Blocked:
+  - 无真实阻塞；比较失败仍为视觉偏差未收敛。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 继续推进 Hero/Info：增大桌面主 logo 占比并微调蓝色块宽度，尝试修正 1280 顶区交叉点偏移。
   - 移动端 feature panel 标题降级（`max-width`、字号、行高），使 430 首屏阅读层级更接近参考。
   - 刷新固定审图文件到 `Homepage/review-shots/latest` 四张路径。
