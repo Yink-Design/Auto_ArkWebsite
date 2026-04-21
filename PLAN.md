@@ -56,6 +56,20 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 继续推进 Stage 2/3：针对 `430` 顶区重排移动端 hero/info 节奏，压缩首屏高度并校正导航信息层级。
+  - 在 `max-width:640px` 下调整 `hero-stage` 比例、logo 与蓝色块尺寸及位置，减少与 `web-ref-430` 的构图偏差。
+  - 移动端导航改为两行紧凑布局（隐藏左侧描述、保留 links + 版权行），并微调 intro 左栏宽度。
+  - 覆盖固定审图集到 `Homepage/review-shots/latest` 四张文件。
+- Next:
+  - 处理 `1024/1280` 顶区仍偏大的问题，优先校准 Hero 高度与 info 区纵向间距。
+  - 对 `430` 继续微调蓝色块高度与首条黑色分隔带厚度，逼近 `Ark.pen`。
+- Blocked:
+  - 无环境阻塞；`compare:ark` 失败来自视觉差异未收敛。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 补充并固化分支规则：最终可审查提交与 review-shots 必须落在 `Codex`，`work` 仅作临时执行分支。
   - 执行分支统一：将最新规则提交同步到远端 `work` 与 `Codex`，并将当前工作分支切换为 `Codex`。
   - 对首页顶区做一轮结构压缩：导航取消 sticky 叠层，收紧 intro 空栏与标题字号，降低 1024/1280 顶区偏差。
