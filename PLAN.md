@@ -56,6 +56,18 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 对 desktop hero 标记做 A/B（去除额外 scale），确认当前 diff 指标基本不变，保留更简洁的几何实现作为基线。
+  - 复跑完整校验链路并刷新固定审图集四张路径，便于后续继续对比。
+- Next:
+  - 继续聚焦 1024/1280：优先修正 hero 主标记与蓝色块交叉点位置，而不是继续放大/缩放整体。
+  - 拆分 nav 与 intro 的独立校准实验，避免单次改动牵动多个区域导致回归。
+- Blocked:
+  - 无真实阻塞；compare fail 仍是视觉偏差。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 在 `<=640` 断点恢复并缩放 mini-lockup（左上角小标识），使 430 顶区层级更贴近参考图。
   - 保留桌面 hero 的缩放试探并验证，确认本轮主要收益集中在移动端（430 指标继续下降）。
   - 覆盖固定审图集：`review-shots/latest/430-top.png`、`1024-top.png`、`1280-top.png`、`1280-full.png`。
