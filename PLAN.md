@@ -56,6 +56,20 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 补充并固化分支规则：最终可审查提交与 review-shots 必须落在 `Codex`，`work` 仅作临时执行分支。
+  - 执行分支统一：将最新规则提交同步到远端 `work` 与 `Codex`，并将当前工作分支切换为 `Codex`。
+  - 对首页顶区做一轮结构压缩：导航取消 sticky 叠层，收紧 intro 空栏与标题字号，降低 1024/1280 顶区偏差。
+  - 刷新固定审图集：`review-shots/latest/{430-top,1024-top,1280-top,1280-full}.png`。
+- Next:
+  - 继续优先修复 Hero/Info 在 `430` 的纵向节奏与蓝色媒体块高度，使顶部结构更接近 `Ark.pen`。
+  - 对 `360/430/768` 分段微调文字尺寸与首屏留白，避免移动端标题区过挤。
+- Blocked:
+  - `compare:ark` 仍对 `430/1024/1280` 报 fail（现阶段为持续迭代中，非环境阻塞）。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - Added project-level planning and agent instructions.
   - Added local capture, compare, and verify scripts for the Ark homepage workflow.
   - Added repeatable npm commands for screenshot-based verification.

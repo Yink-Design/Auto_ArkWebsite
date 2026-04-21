@@ -198,8 +198,7 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
   }
 
   .ref-home__nav {
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 10;
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -208,8 +207,7 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
     min-height: 40px;
     padding: 10px 0 12px;
     border-bottom: 1px solid var(--rule);
-    background: color-mix(in srgb, var(--bg) 94%, transparent);
-    backdrop-filter: blur(8px);
+    background: var(--bg);
     font-size: clamp(12px, 1.05vw, 15px);
   }
 
@@ -248,7 +246,7 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
   }
 
   .ref-home__intro-void {
-    min-height: clamp(220px, 19vw, 274px);
+    min-height: clamp(188px, 16.6vw, 242px);
     border-right: 1px solid var(--rule);
   }
 
@@ -258,7 +256,7 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
 
   .ref-home__intro-kicker {
     margin: 0;
-    font-size: clamp(44px, 5.1vw, 72px);
+    font-size: clamp(40px, 4.6vw, 66px);
     line-height: 0.95;
     font-weight: 900;
     letter-spacing: -0.055em;
@@ -267,7 +265,7 @@ import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
   .ref-home__intro-copy h1 {
     max-width: 12ch;
     margin: clamp(6px, 0.8vw, 10px) 0 0;
-    font-size: clamp(33px, 4.7vw, 68px);
+    font-size: clamp(30px, 4.2vw, 62px);
     line-height: 0.95;
     font-weight: 700;
     letter-spacing: -0.055em;
