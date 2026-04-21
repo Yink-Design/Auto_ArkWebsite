@@ -18,16 +18,20 @@ This file is for coding agents working in this repository. Treat it as executabl
   - `npm run capture:ark` when the homepage changed
   - `npm run compare:ark` when a reference comparison is relevant
 - Run `npm run build` before claiming a stable milestone or handoff.
+- If the user sends a short continuation command such as `继续推进`, `continue`, `继续`, or `go on`, treat it as an instruction to resume the current highest-priority unfinished work using `PLAN.md` and the nearest `AGENTS.md` without asking for a new long prompt.
 
 ## Required Output Discipline
 - Do not stop with analysis only when implementation is feasible.
 - Before ending a work session, always report:
-  - completed work
-  - unfinished work
-  - next recommended step
-  - blockers
-  - commands actually run
+  - `本轮完成`
+  - `当前仍不像的地方`
+  - `最新验证结果`
+  - `下一步具体要修什么`
+  - `运行过的命令`
 - If you hit a hard blocker or rate limit, update `PLAN.md` first.
+- All explanatory reporting, summaries, blocker analysis, and handoff notes must be written in Simplified Chinese.
+- Keep commands, file paths, branch names, package names, and metric keys in English when needed, but all narrative text must be Chinese.
+- In `当前仍不像的地方`, explicitly state the worst breakpoint, the worst section, and whether the page became closer to or further from `Ark.pen`.
 
 ## Implementation Constraints
 - Keep the Astro structure unless a targeted refactor clearly improves fidelity or maintainability.
@@ -40,6 +44,13 @@ This file is for coding agents working in this repository. Treat it as executabl
 - Use local screenshot artifacts as objective feedback, not as a substitute for reference inspection.
 - Capture the directly affected area first when possible, then a larger top or full-page frame if the change affects the overall read.
 - Treat screenshot verification as required for layout, clipping, overlap, spacing, and layer-order changes.
+- For GitHub-based visual review, always maintain a small fixed review set instead of committing large batches of process screenshots.
+- Overwrite and commit only these review files when verification runs or a milestone is reached:
+  - `Homepage/review-shots/latest/430-top.png`
+  - `Homepage/review-shots/latest/1024-top.png`
+  - `Homepage/review-shots/latest/1280-top.png`
+  - `Homepage/review-shots/latest/1280-full.png`
+- In every report, explicitly list the current review image paths so the user can inspect them in GitHub.
 
 ## Subproject Override
 - If editing files inside `Homepage`, also read `Homepage/AGENTS.md`.

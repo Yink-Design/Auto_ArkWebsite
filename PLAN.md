@@ -11,6 +11,12 @@
 - After each visible change, run `npm run check`, capture affected screenshots, then update this file.
 - Do not stop at analysis. Stop only for missing product intent, conflicting references, broken environment, or rate limits.
 - Before any handoff, record `Completed`, `Next`, `Blocked`, and the latest verification commands.
+- For GitHub review, maintain a fixed screenshot set at:
+  - `Homepage/review-shots/latest/430-top.png`
+  - `Homepage/review-shots/latest/1024-top.png`
+  - `Homepage/review-shots/latest/1280-top.png`
+  - `Homepage/review-shots/latest/1280-full.png`
+- Prefer Simplified Chinese for explanatory handoff text in this file.
 
 ## Stages
 | Stage | Status | Done When |
@@ -63,12 +69,19 @@
   - `npm run verify:ark`
 
 ## Handoff Template
-- Completed:
-- Remaining:
-- Next:
-- Blocked:
-- Latest compare report:
-- Commands run:
+- 本轮完成:
+- 当前仍不像的地方:
+- 最新验证结果:
+- 下一步具体要修什么:
+- 运行过的命令:
+
+## Review Images
+- Always keep the latest GitHub-reviewable screenshots in:
+  - `Homepage/review-shots/latest/430-top.png`
+  - `Homepage/review-shots/latest/1024-top.png`
+  - `Homepage/review-shots/latest/1280-top.png`
+  - `Homepage/review-shots/latest/1280-full.png`
+- Overwrite these fixed paths instead of creating new timestamped review files for every loop.
 
 ## Resume Prompt
 `继续按 PLAN.md 和 AGENTS.md 执行，不要停在分析；先读未完成项，再实现、检查、截图、更新进度，直到遇到真正阻塞或额度上限。`
