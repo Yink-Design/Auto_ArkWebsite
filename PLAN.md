@@ -56,6 +56,18 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 新增 desktop hero 主标记的左偏定位实验（`left: -8%`），用于逼近 Ark 顶区交叉点的目标位置。
+  - 复跑 check/verify 并刷新固定审图集，确认 430 指标维持在当前最优区间（17.09%）。
+- Next:
+  - 继续针对 1024/1280 做“交叉点局部位移 + 蓝块宽度微调”的组合实验，避免大尺度缩放。
+  - 如指标仍停滞，拆分 hero 与 intro 的对比基准图范围，先单独收敛 hero 顶区。
+- Blocked:
+  - 无真实阻塞；比较任务正常执行，当前问题为视觉收敛速度慢。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 对 desktop hero 标记做 A/B（去除额外 scale），确认当前 diff 指标基本不变，保留更简洁的几何实现作为基线。
   - 复跑完整校验链路并刷新固定审图集四张路径，便于后续继续对比。
 - Next:
