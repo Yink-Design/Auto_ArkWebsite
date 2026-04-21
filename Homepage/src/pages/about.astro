@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { notes } from '@/data/site';
+---
+
+<BaseLayout title="AIM Replica | About">
+  <main class="subpage">
+    <section class="shell subpage__hero">
+      <p class="eyebrow">About</p>
+      <h1>What was replicated here</h1>
+      <p>
+        The reference site works because it behaves like a curated exhibition instead of a
+        conventional portfolio: huge type, sparse navigation, precise color accents, and a smooth
+        long-scroll rhythm.
+      </p>
+    </section>
+
+    <section class="shell subpage__grid">
+      <article class="subpage-card">
+        <p class="eyebrow">Layout</p>
+        <h2>Editorial sections over card grids</h2>
+        <p>
+          The home page is built from a few large frames: title, manifesto, gallery access, feature
+          slider, and footer. Most of the drama comes from pacing and composition, not dense content.
+        </p>
+      </article>
+
+      <article class="subpage-card">
+        <p class="eyebrow">Motion</p>
+        <h2>Smooth scroll with restrained reveal</h2>
+        <p>
+          Instead of constant micro-animation, the page favors entrance timing, modal transitions,
+          image stacking, and a slightly viscous scroll feel.
+        </p>
+      </article>
+
+      <article class="subpage-card">
+        <p class="eyebrow">Structure</p>
+        <h2>Home, experiment, about, and overlay gallery</h2>
+        <p>
+          Navigation is intentionally small. The modal gallery behaves like a side route without
+          forcing a full page change, preserving the exhibition flow.
+        </p>
+      </article>
+    </section>
+
+    <section class="shell note-stack">
+      {notes.map((note) => (
+        <p>{note}</p>
+      ))}
+    </section>
+  </main>
+</BaseLayout>

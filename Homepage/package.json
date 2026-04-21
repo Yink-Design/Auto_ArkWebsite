@@ -1,0 +1,34 @@
+{
+  "name": "aim-homepage-replica",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "capture:ark": "node ./scripts/capture-ark.mjs",
+    "compare:ark": "node ./scripts/compare-ark.mjs",
+    "verify:ark": "node ./scripts/verify-ark.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.7.0",
+    "lenis": "^1.3.11",
+    "lottie-web": "^5.13.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.21",
+    "playwright": "^1.59.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  }
+}

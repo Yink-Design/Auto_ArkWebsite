@@ -1,0 +1,48 @@
+---
+const introBlockA = [
+  'This AI experiment delves into a',
+  'contemporary reimagining of the Kharkiv',
+  'Modernism[*] movement from 1910 to',
+  '1930. Drawing inspiration from the avant-',
+  'garde artists and intellectuals of that era,',
+  'we employ cutting-edge artificial[**]',
+  'intelligence techniques to reinterpret and',
+  'revive their visionary ideas.'
+];
+
+const introBlockB = [
+  'By leveraging modern technology, we[***]',
+  'aim to uncover new perspectives on the',
+  'artistic, architectural, and cultural legacy',
+  'of Kharkiv Modernism.'
+];
+---
+
+<section class="intro-section" id="Home-about" data-reveal-root>
+  <div class="shell intro-section__inner">
+    <div class="intro-lines intro-lines--split">
+      <div>
+        {introBlockA.map((line) => (
+          <p class="reveal-line">{line}</p>
+        ))}
+      </div>
+      <div>
+        {introBlockB.map((line) => (
+          <p class="reveal-line">{line}</p>
+        ))}
+      </div>
+    </div>
+
+    <div class="intro-notes">
+      <p>[*] Collective name 1910-30 Kharkiv&apos;s artists</p>
+      <p>
+        [**] Main visual AI tool is
+        <a href="https://www.midjourney.com/home" target="_blank" rel="noreferrer"> Midjourney</a>
+      </p>
+      <p>
+        [***] Experiment produced by
+        <a href="https://obys.agency/" target="_blank" rel="noreferrer"> Obys</a>
+      </p>
+    </div>
+  </div>
+</section>

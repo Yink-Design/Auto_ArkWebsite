@@ -1,0 +1,8 @@
+---
+import ExperimentScroller from '@/components/home/ExperimentScroller';
+import { featuredExperiments } from '@/data/gallery';
+---
+
+<section class="experiment-section">
+  <ExperimentScroller client:load items={featuredExperiments} />
+</section>

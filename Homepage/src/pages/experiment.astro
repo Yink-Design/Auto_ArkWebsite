@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { featuredExperiments } from '@/data/gallery';
+---
+
+<BaseLayout title="AIM Replica | Experiment">
+  <main class="subpage">
+    <section class="shell subpage__hero">
+      <p class="eyebrow">Experiment</p>
+      <h1>Featured image series</h1>
+      <p>
+        This page turns the sticky showcase into a simpler grid so the image set can be scanned
+        without the homepage pacing.
+      </p>
+    </section>
+
+    <section class="shell experiment-grid">
+      {featuredExperiments.map((item, index) => (
+        <article class="experiment-card-static" style={`--accent:${item.accent}`}>
+          <img src={item.image} alt={item.name} loading="lazy" />
+          <div>
+            <p class="eyebrow">{String(index + 1).padStart(2, '0')} / {item.label}</p>
+            <h2>{item.name}</h2>
+            <p>{item.year}</p>
+          </div>
+        </article>
+      ))}
+    </section>
+  </main>
+</BaseLayout>

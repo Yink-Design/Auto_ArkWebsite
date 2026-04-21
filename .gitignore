@@ -1,0 +1,38 @@
+# Repository scope
+/.opencode/
+/PencilverHomepage/
+/skills/
+/V1homepage/
+
+# Node / build outputs
+**/node_modules/
+**/dist/
+**/.astro/
+**/.vite/
+
+# Logs and temp files
+*.log
+*.err
+*.tmp
+*.temp
+Thumbs.db
+.DS_Store
+
+# Generated assets
+Homepage/generated_pen_assets/*
+!Homepage/generated_pen_assets/f0CrT.png
+
+# Screenshot policy: keep only core references and empty automation skeleton
+Homepage/screenshots/*
+!Homepage/screenshots/ark-automation/
+Homepage/screenshots/ark-automation/*
+!Homepage/screenshots/ark-automation/current/
+Homepage/screenshots/ark-automation/current/*
+!Homepage/screenshots/ark-automation/current/.gitkeep
+!Homepage/screenshots/ark-automation/reports/
+Homepage/screenshots/ark-automation/reports/*
+!Homepage/screenshots/ark-automation/reports/.gitkeep
+!Homepage/screenshots/web-ref-top.png
+!Homepage/screenshots/web-ref-430.png
+!Homepage/screenshots/ark-home-1024-v8.png
+!Homepage/screenshots/ark-home-full-v11.png

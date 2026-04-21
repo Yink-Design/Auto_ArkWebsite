@@ -1,0 +1,26 @@
+---
+type Props = {
+  class?: string;
+};
+
+const { class: className = '' } = Astro.props as Props;
+---
+
+<svg
+  class:list={['ark-brand-mark', className]}
+  aria-hidden="true"
+  viewBox="0 0 743.534 341"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M241.008 341V0H382.023V341H241.008Z" fill="currentColor"></path>
+  <path
+    d="M402.534 198.762L544.771 341H742.543L743.37 340.173L502.246 99.05L402.534 198.762Z"
+    fill="currentColor"
+  ></path>
+  <path d="M402.811 0L402.694 0.117L502.407 99.829L602.236 0H402.811Z" fill="currentColor"></path>
+  <path
+    d="M241.123 0L0 241.123V241.124L99.712 340.836L340.836 99.713L241.123 0Z"
+    fill="currentColor"
+  ></path>
+</svg>

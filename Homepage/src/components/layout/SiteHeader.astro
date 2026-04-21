@@ -1,0 +1,64 @@
+---
+import { navItems } from '@/data/site';
+---
+
+<header class="site-header">
+  <div class="site-header__bar">
+    <div class="site-header__left">
+      <p>AI Modernism of Kharkiv [Ukraine]</p>
+    </div>
+
+    <div class="site-header__right">
+      <div class="site-header__nav-wrap">
+        <a href="/" class="transition-link">Index</a>
+        <span>/</span>
+        {navItems.map((item, index) => (
+          <>
+            <a href={item.href} class="transition-link">{item.label}</a>
+            {index < navItems.length - 1 && <span>/</span>}
+          </>
+        ))}
+      </div>
+
+      <div class="site-header__meta">
+        <button type="button" class="nav-link-plain" data-open-gallery>[Gallery]</button>
+        <span>Obys Agency ©2025</span>
+      </div>
+
+      <button type="button" class="menu-button" data-toggle-menu>Menu</button>
+    </div>
+  </div>
+
+  <div class="menu-panel" data-menu-panel aria-hidden="true">
+    <div class="menu-panel__backdrop" data-close-menu></div>
+    <div class="menu-panel__sheet">
+      <div class="menu-panel__top">
+        <div>
+          <p class="eyebrow">Index</p>
+          <h2>Navigation and references</h2>
+        </div>
+        <button type="button" class="menu-close" data-close-menu>Close</button>
+      </div>
+
+      <div class="menu-panel__grid">
+        <div>
+          <p class="eyebrow">Pages</p>
+          <ul class="menu-list">
+            <li><a href="/" class="transition-link" data-close-menu>Index</a></li>
+            <li><a href="/experiment" class="transition-link" data-close-menu>Experiment</a></li>
+            <li><a href="/about" class="transition-link" data-close-menu>About</a></li>
+            <li><button type="button" data-open-gallery data-close-menu>Gallery</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow">Note</p>
+          <p class="menu-note">
+            The desktop header now follows the reference site much more closely: a thin top strip,
+            minimal link set, and a persistent gallery entry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

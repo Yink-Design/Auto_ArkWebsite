@@ -1,0 +1,616 @@
+---
+import ArkBrandMark from '@/components/home/ArkBrandMark.astro';
+---
+
+<section class="ref-home" id="top">
+  <div class="ref-home__shell">
+    <section class="ref-home__hero" aria-labelledby="ref-home-title">
+      <div class="ref-home__mini-lockup" aria-hidden="true">
+        <ArkBrandMark class="ref-home__mini-mark" />
+        <div class="ref-home__mini-copy">
+          <p>A.RK</p>
+          <p>Virtual · Art · Live</p>
+        </div>
+      </div>
+
+      <div class="ref-home__hero-stage">
+        <div class="ref-home__hero-media"></div>
+        <ArkBrandMark class="ref-home__hero-mark" />
+      </div>
+    </section>
+
+    <div class="ref-home__band" aria-hidden="true"></div>
+
+    <nav class="ref-home__nav" aria-label="Primary navigation">
+      <p>All about Dr.Shark</p>
+
+      <div class="ref-home__nav-links">
+        <a href="#top" aria-current="page">Index</a>
+        <span>/</span>
+        <button type="button" data-open-gallery>Gallery</button>
+        <span>/</span>
+        <a href="/experiment" class="transition-link">Memo</a>
+        <span>/</span>
+        <a href="/about" class="transition-link">About</a>
+      </div>
+
+      <p>夏可Ark©2026</p>
+    </nav>
+
+    <section class="ref-home__intro" aria-labelledby="ref-home-title">
+      <div class="ref-home__intro-main">
+        <div class="ref-home__intro-void" aria-hidden="true"></div>
+
+        <div class="ref-home__intro-copy">
+          <p class="ref-home__intro-kicker">A.RK</p>
+          <h1 id="ref-home-title">
+            <span>Art · Research ·</span>
+            <span>Knowledge</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="ref-home__intro-meta">
+        <p>Just some text here</p>
+        <a href="#gallery">
+          <span>Scroll to Explore</span>
+          <span aria-hidden="true">↘</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="ref-home__media" id="gallery" aria-labelledby="ref-home-media-title">
+      <div class="ref-home__media-panel">
+        <p class="ref-home__media-label">媒体层占位符</p>
+        <h2 id="ref-home-media-title">Redefine your virtual experience</h2>
+      </div>
+    </section>
+
+    <section class="ref-home__footer" id="about" aria-label="About summary">
+      <div class="ref-home__footer-meta">
+        <p>Vliver, researcher, bassist, or perhaps just an internet dweller.</p>
+        <p>夏可Ark©2026</p>
+      </div>
+      <div class="ref-home__footer-band" aria-hidden="true"></div>
+    </section>
+
+    <section class="ref-home__discover" id="memo" aria-labelledby="ref-home-discover-title">
+      <div class="ref-home__discover-logo-wrap">
+        <ArkBrandMark class="ref-home__discover-mark" />
+      </div>
+
+      <div class="ref-home__discover-copy">
+        <p id="ref-home-discover-title">Want to know more ?</p>
+
+        <div class="ref-home__discover-links">
+          <button type="button" data-open-gallery>Gallery</button>
+          <a href="/experiment" class="transition-link">Memo</a>
+          <a href="/about" class="transition-link">About</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<style>
+  :global(.page-ark-home) {
+    background: #e7e4df;
+  }
+
+  :global(.page-ark-home__main) {
+    min-height: 100vh;
+    background: #e7e4df;
+  }
+
+  .ref-home {
+    --bg: #e7e4df;
+    --ink: #141414;
+    --accent: #4f7898;
+    --shell-max: 1440px;
+    --gutter: clamp(12px, 1.25vw, 18px);
+    --band-h: clamp(24px, 3.2vw, 46px);
+    --rule: rgba(20, 20, 20, 0.92);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'HarmonyOS Sans SC Local', 'Space Grotesk', sans-serif;
+  }
+
+  .ref-home__shell {
+    width: min(calc(100% - (var(--gutter) * 2)), var(--shell-max));
+    margin: 0 auto;
+    padding: 12px 0 20px;
+  }
+
+  .ref-home__hero {
+    position: relative;
+    padding-top: clamp(0px, 3vw, 24px);
+  }
+
+  .ref-home__mini-lockup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .ref-home__mini-mark {
+    width: clamp(56px, 5.5vw, 78px);
+    color: var(--ink);
+    flex: 0 0 auto;
+  }
+
+  .ref-home__mini-copy {
+    padding-top: 2px;
+  }
+
+  .ref-home__mini-copy p {
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .ref-home__mini-copy p:first-child {
+    font-size: clamp(13px, 1.2vw, 16px);
+    font-weight: 300;
+  }
+
+  .ref-home__mini-copy p:last-child {
+    margin-top: 4px;
+    font-size: clamp(10px, 0.95vw, 12px);
+    font-weight: 100;
+    color: rgba(20, 20, 20, 0.5);
+  }
+
+  .ref-home__hero-stage {
+    position: relative;
+    aspect-ratio: 1413 / 341;
+    overflow: hidden;
+  }
+
+  .ref-home__hero-media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 61.3%;
+    background: var(--accent);
+  }
+
+  .ref-home__hero-mark {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 52.62%;
+    height: 100%;
+    color: var(--ink);
+  }
+
+  .ref-home__band,
+  .ref-home__footer-band {
+    height: var(--band-h);
+    background: var(--ink);
+  }
+
+  .ref-home__band {
+    margin-top: 12px;
+  }
+
+  .ref-home__nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    min-height: 40px;
+    padding: 10px 0 12px;
+    border-bottom: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter: blur(8px);
+    font-size: clamp(12px, 1.05vw, 15px);
+  }
+
+  .ref-home__nav p {
+    margin: 0;
+  }
+
+  .ref-home__nav p:last-child {
+    text-align: right;
+  }
+
+  .ref-home__nav-links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.34em;
+  }
+
+  .ref-home__nav a,
+  .ref-home__nav button,
+  .ref-home__intro-meta a,
+  .ref-home__discover-links a,
+  .ref-home__discover-links button {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ref-home__intro {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .ref-home__intro-main {
+    display: grid;
+    grid-template-columns: minmax(280px, 33%) minmax(0, 1fr);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .ref-home__intro-void {
+    min-height: clamp(220px, 19vw, 274px);
+    border-right: 1px solid var(--rule);
+  }
+
+  .ref-home__intro-copy {
+    padding: clamp(18px, 2vw, 28px) 0 clamp(16px, 2vw, 24px) clamp(18px, 1.6vw, 20px);
+  }
+
+  .ref-home__intro-kicker {
+    margin: 0;
+    font-size: clamp(44px, 5.1vw, 72px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -0.055em;
+  }
+
+  .ref-home__intro-copy h1 {
+    max-width: 12ch;
+    margin: clamp(6px, 0.8vw, 10px) 0 0;
+    font-size: clamp(33px, 4.7vw, 68px);
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .ref-home__intro-copy h1 span {
+    white-space: nowrap;
+  }
+
+  .ref-home__intro-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 10px 0 12px;
+    font-size: clamp(12px, 1.05vw, 15px);
+  }
+
+  .ref-home__intro-meta p,
+  .ref-home__intro-meta a {
+    margin: 0;
+  }
+
+  .ref-home__intro-meta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+  }
+
+  .ref-home__media {
+    margin-top: clamp(14px, 1.25vw, 18px);
+  }
+
+  .ref-home__media-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 1413 / 585;
+    min-height: clamp(320px, 42vw, 585px);
+    padding: clamp(24px, 3vw, 34px);
+    background: var(--ink);
+    color: #f3efe8;
+  }
+
+  .ref-home__media-label {
+    margin: auto 0;
+    align-self: center;
+    font-size: clamp(34px, 4.5vw, 66px);
+    font-weight: 100;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .ref-home__media-panel h2 {
+    max-width: 16ch;
+    margin: 0;
+    font-size: clamp(28px, 4.7vw, 66px);
+    line-height: 0.94;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+
+  .ref-home__footer {
+    padding-top: clamp(42px, 6vw, 94px);
+  }
+
+  .ref-home__footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 18px;
+    padding: 0 0 12px;
+    font-size: clamp(11px, 1.05vw, 15px);
+  }
+
+  .ref-home__footer-meta p {
+    margin: 0;
+  }
+
+  .ref-home__footer-meta p:first-child {
+    max-width: 50ch;
+  }
+
+  .ref-home__footer-meta p:last-child {
+    flex: 0 0 auto;
+    text-align: right;
+  }
+
+  .ref-home__discover {
+    display: grid;
+    grid-template-columns: minmax(0, 52.6%) minmax(320px, 1fr);
+    align-items: start;
+    gap: clamp(24px, 3vw, 34px);
+    padding-top: clamp(86px, 7vw, 104px);
+  }
+
+  .ref-home__discover-logo-wrap {
+    aspect-ratio: 743.534 / 341;
+  }
+
+  .ref-home__discover-mark {
+    width: 100%;
+    height: 100%;
+    color: var(--ink);
+  }
+
+  .ref-home__discover-copy > p {
+    margin: 0;
+    font-size: clamp(26px, 2.8vw, 40px);
+    line-height: 1.05;
+    font-weight: 300;
+  }
+
+  .ref-home__discover-links {
+    display: grid;
+    gap: clamp(6px, 1vw, 16px);
+    margin-top: clamp(-6px, -0.3vw, 0px);
+  }
+
+  .ref-home__discover-links > * {
+    width: fit-content;
+    padding: 0;
+    font-family: 'Leeeaf Hei', 'HarmonyOS Sans SC Local', sans-serif;
+    font-size: clamp(68px, 7.8vw, 112px);
+    line-height: 0.86;
+    letter-spacing: -0.06em;
+    white-space: nowrap;
+  }
+
+  .ref-home__discover-links > :nth-child(2) {
+    margin-left: 15%;
+  }
+
+  .ref-home__nav a:hover,
+  .ref-home__nav button:hover,
+  .ref-home__intro-meta a:hover,
+  .ref-home__discover-links a:hover,
+  .ref-home__discover-links button:hover {
+    opacity: 0.68;
+  }
+
+  @media (min-width: 1700px) {
+    .ref-home {
+      --shell-max: 1680px;
+    }
+  }
+
+  @media (min-width: 2200px) {
+    .ref-home {
+      --shell-max: 1920px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .ref-home__shell {
+      width: min(calc(100% - 26px), 100%);
+    }
+
+    .ref-home__mini-lockup {
+      display: none;
+    }
+
+    .ref-home__nav {
+      grid-template-columns: 1fr;
+      justify-items: start;
+      gap: 6px;
+    }
+
+    .ref-home__nav p:last-child {
+      text-align: left;
+    }
+
+    .ref-home__intro-main {
+      grid-template-columns: 110px minmax(0, 1fr);
+    }
+
+    .ref-home__intro-copy h1 {
+      max-width: 9ch;
+    }
+
+    .ref-home__intro-copy h1 span {
+      display: block;
+    }
+
+    .ref-home__footer-meta {
+      align-items: flex-start;
+    }
+
+    .ref-home__discover {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding-top: 72px;
+    }
+
+    .ref-home__discover-logo-wrap {
+      order: 2;
+      width: min(66vw, 520px);
+    }
+
+    .ref-home__discover-copy {
+      order: 1;
+    }
+
+    .ref-home__discover-links > :nth-child(2) {
+      margin-left: 22%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .ref-home__hero-stage {
+      aspect-ratio: 1 / 0.77;
+    }
+
+    .ref-home__hero-mark {
+      width: 63%;
+      height: auto;
+      top: 0;
+      bottom: auto;
+    }
+
+    .ref-home__hero-media {
+      width: 60%;
+      height: min(29vw, 110px);
+      top: 0;
+      bottom: auto;
+    }
+
+    .ref-home__band {
+      margin-top: 10px;
+    }
+
+    .ref-home__intro-main {
+      grid-template-columns: 78px minmax(0, 1fr);
+    }
+
+    .ref-home__intro-void {
+      min-height: 110px;
+    }
+
+    .ref-home__intro-copy {
+      padding-left: 14px;
+    }
+
+    .ref-home__intro-copy h1 {
+      max-width: 7ch;
+    }
+
+    .ref-home__intro-meta {
+      align-items: flex-end;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    .ref-home__intro-meta p {
+      max-width: 10ch;
+      line-height: 1.1;
+    }
+
+    .ref-home__media-panel {
+      min-height: 430px;
+      padding: 18px 16px 22px;
+    }
+
+    .ref-home__media-label {
+      font-size: clamp(30px, 9vw, 48px);
+    }
+
+    .ref-home__media-panel h2 {
+      max-width: 11ch;
+      font-size: clamp(22px, 8.2vw, 34px);
+    }
+
+    .ref-home__footer-meta {
+      font-size: 12px;
+    }
+
+    .ref-home__footer-meta p:first-child {
+      max-width: 20ch;
+      line-height: 1.15;
+    }
+
+    .ref-home__discover {
+      padding-top: 62px;
+      gap: 16px;
+    }
+
+    .ref-home__discover-copy > p {
+      max-width: 8ch;
+      font-size: 22px;
+    }
+
+    .ref-home__discover-links {
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .ref-home__discover-links > * {
+      font-size: clamp(58px, 15vw, 72px);
+    }
+
+    .ref-home__discover-links > :nth-child(2) {
+      margin-left: 0;
+    }
+
+    .ref-home__discover-logo-wrap {
+      width: min(72vw, 320px);
+    }
+  }
+
+  @media (max-width: 389px) {
+    .ref-home__shell {
+      width: min(calc(100% - 20px), 100%);
+    }
+
+    .ref-home__intro-main {
+      grid-template-columns: 74px minmax(0, 1fr);
+    }
+
+    .ref-home__intro-copy {
+      padding-top: 14px;
+      padding-left: 12px;
+    }
+
+    .ref-home__intro-kicker {
+      font-size: 42px;
+    }
+
+    .ref-home__intro-copy h1 {
+      font-size: 28px;
+    }
+
+    .ref-home__intro-meta {
+      font-size: 11px;
+    }
+
+    .ref-home__intro-meta a {
+      gap: 0.24em;
+    }
+
+    .ref-home__footer-meta p:first-child {
+      max-width: 16ch;
+    }
+  }
+</style>
