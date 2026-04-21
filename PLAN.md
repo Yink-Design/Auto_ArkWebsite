@@ -56,6 +56,19 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 继续推进 Hero/Info：增大桌面主 logo 占比并微调蓝色块宽度，尝试修正 1280 顶区交叉点偏移。
+  - 移动端 feature panel 标题降级（`max-width`、字号、行高），使 430 首屏阅读层级更接近参考。
+  - 刷新固定审图文件到 `Homepage/review-shots/latest` 四张路径。
+- Next:
+  - 继续针对 1280 处理主 logo 右侧黑形体的切入角度与位置（当前仍偏右偏低）。
+  - 修正 1024/1280 顶部小标识与主形体的相对高度，减少首屏结构错位感。
+- Blocked:
+  - 无真实阻塞；compare 失败仍来自视觉差异。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 继续推进顶部构图校准：收紧桌面 hero 顶部留白（`.ref-home__hero`）、微调主 logo 与蓝色块比例，压低 1024/1280 的结构漂移。
   - 细调 `<=640` hero 比例与 logo 宽度，恢复并提升 `430` 断点拟合度。
   - 刷新固定审图集到 `Homepage/review-shots/latest/{430-top,1024-top,1280-top,1280-full}.png`。
