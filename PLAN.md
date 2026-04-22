@@ -56,6 +56,18 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 将 desktop hero 主标记左偏实验从 `-8%` 微调为 `-6%`，测试交叉点对位的敏感区间。
+  - 复跑 check/verify 并刷新固定审图集，指标基本持平，确认当前调整尚未突破 desktop 差异瓶颈。
+- Next:
+  - 下一轮改为“蓝块宽度 + 主标记 left 联动步进”（小步长网格搜索），避免单变量卡住。
+  - 若依然无显著改善，改为在 1024/1280 分别设定断点专用 hero 参数。
+- Blocked:
+  - 无真实阻塞；当前是视觉参数搜索效率问题。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 新增 desktop hero 主标记的左偏定位实验（`left: -8%`），用于逼近 Ark 顶区交叉点的目标位置。
   - 复跑 check/verify 并刷新固定审图集，确认 430 指标维持在当前最优区间（17.09%）。
 - Next:
