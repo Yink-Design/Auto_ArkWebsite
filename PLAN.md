@@ -56,6 +56,18 @@
 ## Status Log
 ### 2026-04-21
 - Completed:
+  - 在 `<=640` 下执行 hero 局部参数试探：主标记宽度/位置与蓝色块宽度高度微调，验证 430 顶区对参数变化的敏感性。
+  - 完整复跑 check/verify 并刷新固定审图集，记录本轮 430 指标轻微回退（17.09% -> 17.40%）。
+- Next:
+  - 回滚本轮移动端试探并改用“仅调 mini-lockup 与 band 高度”的小步实验，避免放大主形体导致偏移。
+  - 继续保持 desktop 参数稳定，优先分离移动端与桌面端的独立收敛策略。
+- Blocked:
+  - 无真实阻塞；存在参数耦合导致单次改动容易回退。
+- Verification:
+  - `npm run check`
+  - `npm run verify:ark`
+
+- Completed:
   - 将 desktop hero 主标记左偏实验从 `-8%` 微调为 `-6%`，测试交叉点对位的敏感区间。
   - 复跑 check/verify 并刷新固定审图集，指标基本持平，确认当前调整尚未突破 desktop 差异瓶颈。
 - Next:
